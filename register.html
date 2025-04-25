@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form action="register.html" method="post">
+            <input type="text" name="username" placeholder="Логин" required />
+            <input type="password" name="password" placeholder="Пароль" required />
+            <input type="email" name="mail" placeholder="Почта" required />
+            <input type="text" name="fio" placeholder="ФИО" required />
+            
+            <!-- Календарь выбора даты -->
+            <label for="dob">Дата рождения:</label>
+            <input type="date" name="dob" id="dob" required />
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <a href="login.html">Уже есть аккаунт? Войти</a>
+
+        <!-- Сообщение об ошибке через JSP -->
+        <p id="error-message">
+            <%= request.getParameter("error") != null ? "Пользователь с таким логином уже существует" : "" %>
+        </p>
+    </div>
+</body>
+</html>
+

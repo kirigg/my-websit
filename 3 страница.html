@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новости Darknet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+      color: #fff;
+      overflow-x: hidden; /* Запрещаем прокрутку по оси X */
+    }
+
+    /* Стили для навигационной панели */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 15px 30px;
+      box-shadow: 0 0 10px #00ffaa66;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .nav-brand a {
+      font-size: 1.5em;
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00ffaa;
+      border-bottom: 2px solid #00ffaa;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.9);
+      border-bottom: 2px solid #00ffaa;
+      box-shadow: 0 0 10px #00ffaa77;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #00ffaa;
+      margin: 0;
+    }
+
+    .news-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .news-card {
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 170, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #00ffaa66;
+    }
+
+    .news-card h3 {
+      margin-top: 0;
+      color: #00ffaa;
+    }
+
+    .news-card p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .news-card dfn {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      .news-card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигационное меню -->
+  <nav class="navbar">
+    <div class="nav-brand"><a href="1 страница.html">DarkNet Portal</a></div>
+    <ul class="nav-links">
+      <li><a href="1 страница.html">Главная</a></li>
+      <li><a href="3 страница.html">Новости</a></li>
+      <li><a href="2 страница.html">Материалы</a></li>
+      <li><a href="4 страница.html">Технологии</a></li>
+      <li><a href="8 страница.html">Философия</a></li>
+      <li><a href="6 страница.html">Безопасность</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Новости Darknet</h1>
+  </header>
+
+  <div class="news-container">
+
+    <div class="news-card">
+      <h3>Эксперты выявили рост числа продаваемых в даркнете российских компаний</h3>
+      <p>В 2023-м в теневом сегменте Сети на продажу выставили почти 2 тыс. российских компаний. Их используют для отмывания средств, атак на цепочки поставок, в сценариях ложного партнерства и махинациях с фирмами-однодневками.</p>
+      <dfn>РБК, Бизнес, 22 мар, 06:00</dfn>
+    </div>
+
+    <div class="news-card">
+      <h3>В США назвали «ударом по криптопреступности» дело россиянина «Толика»</h3>
+      <p>В США арестовали россиянина Анатолия Легкодымова, через криптобиржу Bitzlato которого отмывались деньги от крупнейшего даркнет-рынка наркотиков Hydra.</p>
+      <dfn>РБК, Политика, 18 янв 2023, 21:40</dfn>
+    </div>
+
+    <div class="news-card">
+      <h3>«Коммерсантъ» сообщил о продаже доступа к Spotify и Netflix в даркнете</h3>
+      <p>Продавцы предлагают присоединиться к зарубежным семейным аккаунтам. Большинство таких объявлений эксперты считают мошенническими.</p>
+      <dfn>РБК, Технологии и медиа, 29 апр 2022, 08:06</dfn>
+    </div>
+
+    <div class="news-card">
+      <h3>В Германии полиция закрыла крупнейший в мире даркнет-маркет Hydra</h3>
+      <p>Hydra — крупнейшая русскоязычная торговая площадка даркнета. Её серверы были ликвидированы немецкими силовиками.</p>
+      <dfn>РБК, Общество, 05 апр 2022, 15:48</dfn>
+    </div>
+
+    <div class="news-card">
+      <h3>Роскачество рассказало о схеме мошенничества со «слитыми» картами банков</h3>
+      <p>После появления в даркнете базы из 100 тыс. банковских карт, мошенники начали предлагать пользователям "проверку" карт, чтобы украсть средства со счетов.</p>
+      <dfn>РБК, Технологии и медиа, 16 мар 2022, 06:21</dfn>
+    </div>
+
+    <div class="news-card">
+      <h3>«Коммерсантъ» узнал о сливе данных 100 тыс. карт российских банков</h3>
+      <p>По словам экспертов, утечки начались давно, но теперь мошенники решили слить базы, так как они утратили ценность. Однако данные все ещё используются.</p>
+      <dfn>РБК, Финансы, 14 мар 2022, 01:32</dfn>
+    </div>
+
+  </div>
+
+</body>
+</html>

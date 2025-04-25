@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incognito Web-приложения</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+      color: #fff;
+      overflow-x: hidden; /* отключаем горизонтальную прокрутку */
+    }
+
+    /* Навигационная панель */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 15px 30px;
+      box-shadow: 0 0 10px #00ffaa66;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0; /* панель будет растягиваться на всю ширину экрана */
+      width: 100%;
+      z-index: 999;
+    }
+
+    .nav-brand a {
+      font-size: 1.5em;
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00ffaa;
+      border-bottom: 2px solid #00ffaa;
+    }
+
+    /* Контент */
+    .content {
+      margin-top: 100px; /* отступ, чтобы контент не перекрывался панелью */
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-bottom: 4px solid #00ffaa;
+      max-height: 400px;
+      display: block;
+    }
+
+    .text {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffaa44;
+    }
+
+    h2, h3 {
+      color: #00ffaa;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    dfn {
+      color: #00ffaa;
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    ol {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffaa33;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ffaa88;
+    }
+
+    @media (max-width: 600px) {
+      .text {
+        padding: 15px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигационная панель -->
+  <nav class="navbar">
+    <div class="nav-brand"><a href="1 страница.html">DarkNet Portal</a></div>
+    <ul class="nav-links">
+      <li><a href="1 страница.html">Главная</a></li>
+      <li><a href="3 страница.html">Новости</a></li>
+      <li><a href="2 страница.html">Материалы</a></li>
+      <li><a href="4 страница.html">Технологии</a></li>
+      <li><a href="8 страница.html">Философия</a></li>
+      <li><a href="6 страница.html">Безопасность</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="photo">
+      <img src="wp.jpg" alt="Incognito Security">
+    </div>
+
+    <div class="text">
+      <h2>Разработка анонимных веб-приложений в Darknet</h2>
+      <p>Создание веб-приложений для Darknet требует особого внимания к анонимности и безопасности. Разработчик должен учитывать не только защиту от внешних атак, но и конфиденциальность данных и личностей пользователей.</p>
+
+      <h3>Ключевые аспекты безопасности:</h3>
+      <ol>
+        <li><dfn>Шифрование данных:</dfn> Использование протоколов SSL/TLS, безопасное хранение паролей и чувствительной информации.</li>
+        <li><dfn>Защита от атак:</dfn> Фильтрация входных данных, предотвращение SQL-инъекций, XSS и CSRF.</li>
+        <li><dfn>Анонимность пользователей:</dfn> Использование Tor, скрытие IP-адресов, минимизация собираемых данных.</li>
+        <li><dfn>Безопасность хранения:</dfn> Хэширование паролей, шифрование данных, резервные копии и контроль целостности.</li>
+        <li><dfn>Мониторинг и контроль доступа:</dfn> Отслеживание активности, система ролей и ограничений, предотвращение несанкционированного доступа.</li>
+      </ol>
+
+      <div class="gallery">
+        <img src="anon.jpg" alt="Анонимность">
+        <img src="chifr.jpg" alt="Шифрование">
+        <img src="server.png" alt="Хранение данных">
+        <img src="zachita.jpg" alt="Защита от атак">
+        <img src="monitor.jpg" alt="Мониторинг">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

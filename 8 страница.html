@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="filosof.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filosofia</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+      color: #fff;
+    }
+
+    /* Навигационная панель */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 15px 30px;
+      box-shadow: 0 0 10px #00ffaa66;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    .nav-brand a {
+      font-size: 1.5em;
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00ffaa;
+      border-bottom: 2px solid #00ffaa;
+    }
+
+    /* Отступ для контента */
+    .content {
+      margin-top: 100px; /* Чтобы панель не перекрывала контент */
+      padding: 20px;
+    }
+
+    .photo img {
+      width: 100%;
+      display: block;
+      max-height: 400px;
+      object-fit: cover;
+      border-bottom: 4px solid #00ffaa;
+    }
+
+    .text {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #181818;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffaa55;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00ffaa;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      color: #00ffcc;
+      margin-top: 30px;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding: 15px 20px;
+      background: #222;
+      border-left: 5px solid #00ffaa;
+      font-style: italic;
+      color: #ccc;
+      box-shadow: 0 0 10px #00ffaa33;
+    }
+
+    blockquote q {
+      quotes: "«" "»";
+    }
+
+    blockquote footer {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #999;
+      text-align: right;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Навигационная панель -->
+  <nav class="navbar">
+    <div class="nav-brand"><a href="1 страница.html">DarkNet Portal</a></div>
+    <ul class="nav-links">
+      <li><a href="1 страница.html">Главная</a></li>
+      <li><a href="3 страница.html">Новости</a></li>
+      <li><a href="2 страница.html">Материалы</a></li>
+      <li><a href="4 страница.html">Технологии</a></li>
+      <li><a href="8 страница.html">Философия</a></li>
+      <li><a href="6 страница.html">Безопасность</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="photo">
+      <div class="back">
+        <img src="graj.jpg" alt="Darknet">
+      </div>
+    </div>
+    <div class="text">
+      <h2>Философия Darknet</h2>
+
+      <h3>Этические вопросы:</h3>
+      <ol>
+        <li><dfn>Анонимность и конфиденциальность:</dfn> Darknet обеспечивает пользователям анонимность и конфиденциальность, что может быть как положительным, так и отрицательным аспектом. С одной стороны, это позволяет защищать личную информацию и обеспечивать безопасность для пользователей, которые могут быть преследуемы за свои убеждения или действия. С другой стороны, анонимность может способствовать совершению противоправных действий, таких как торговля наркотиками, детской порнографией и т.д.</li>
+        <li><dfn>Свобода слова и цензура:</dfn> Darknet может служить площадкой для свободного выражения мнений и обмена информацией, которая может быть запрещена или ограничена в обычном интернете. Однако такие форумы и ресурсы могут также стать местом распространения ненависти, пропаганды насилия и других негативных материалов.</li>
+        <li><dfn>Ответственность и моральные принципы:</dfn> Пользователи darknet должны определить свои собственные моральные принципы и принять на себя ответственность за свои действия. Это может быть проблематично, особенно когда речь идет о совершении противоправных действий.</li>
+      </ol>
+
+      <h3>Правовые аспекты и законы:</h3>
+      <ol>
+        <li><dfn>Международный характер darknet:</dfn> Поскольку darknet является частью глобальной сети, регулирование его деятельности затруднено из-за различий в законодательстве разных стран. Некоторые страны могут запрещать доступ к darknet или ограничивать его использование, в то время как другие могут не предпринимать.</li>
+        <li><dfn>Борьба с преступностью:</dfn> Правительства и правоохранительные органы сталкиваются с проблемами в борьбе с преступностью на darknet из-за его анонимности и труднодоступности. Тем не менее, многие страны принимают меры для противодействия незаконной деятельности, такой как торговля наркотиками, оружием и другими запрещенными товарами.</li>
+        <li><dfn>Законодательство о киберпреступности:</dfn> В последние годы многие страны принимают или обновляют законодательство о киберпреступности, чтобы бороться с незаконной деятельностью в интернете, включая darknet. Это может включать в себя меры по борьбе с кибершпионажем, кражами данных, мошенничеством и другими видами преступлений.</li>
+      </ol>
+
+      <h3>Проблемы безопасности и борьба с преступностью:</h3>
+      <ol>
+        <li><dfn>Анонимность и деанонимизация:</dfn> Хотя darknet обеспечивает анонимность пользователей, существуют методы деанонимизации, которые могут быть использованы правоохранительными органами для выявления преступников. Это включает в себя анализ трафика, использование информации от сообщников и другие методы.</li>
+        <li><dfn>Операции по аресту и закрытию сайтов:</dfn> Правоохранительные органы проводят операции по аресту лиц, подозреваемых в незаконной деятельности, а также закрытию сайтов, которые могут нарушать законы или угрожать общественной безопасности. Эти меры обычно предпринимаются после тщательного расследования и в соответствии с законодательством страны. Цель таких операций — обеспечить соблюдение закона и защитить права и интересы граждан.</li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+</html>

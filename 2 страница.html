@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darknet Проекты</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    /* Запрещаем прокрутку по оси X для всей страницы */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+      color: #ffffff;
+      overflow-x: hidden; /* Запрещаем прокрутку по оси X */
+    }
+
+    /* Навигационное меню */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 15px 30px;
+      box-shadow: 0 0 10px #00ffaa66;
+      width: 100%;
+      z-index: 999;
+      position: sticky;
+      top: 0;
+    }
+
+    .nav-brand a {
+      font-size: 1.5em;
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00ffaa;
+      border-bottom: 2px solid #00ffaa;
+    }
+
+    /* Контейнер с содержимым */
+    .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 5px solid #00ffaa;
+    }
+
+    .text {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffaa77;
+    }
+
+    .text p, .text ol {
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    dfn {
+      color: #00ffaa;
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #00ffaa55;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #00ffaa;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ffcc;
+      margin-top: 20px;
+    }
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигационное меню -->
+  <nav class="navbar">
+    <div class="nav-brand"><a href="1 страница.html">DarkNet Portal</a></div>
+    <ul class="nav-links">
+      <li><a href="1 страница.html">Главная</a></li>
+      <li><a href="3 страница.html">Новости</a></li>
+      <li><a href="2 страница.html">Материалы</a></li>
+      <li><a href="4 страница.html">Технологии</a></li>
+      <li><a href="8 страница.html">Философия</a></li>
+      <li><a href="6 страница.html">Безопасность</a></li>
+    </ul>
+  </nav>
+
+  <!-- Основной контент страницы -->
+  <div class="photo">
+    <img src="cite.jpg" alt="Darknet cover">
+  </div>
+
+  <div class="text">
+    <h1>Что такое Darknet?</h1>
+    <p>Darknet, или тёмный интернет, представляет собой часть интернета, которая не индексируется обычными поисковыми системами и обеспечивает высокий уровень анонимности для пользователей. На Darknet можно найти различные веб-проекты, некоторые из которых могут быть направлены на защиту личной информации, обход цензуры, торговлю товарами и услугами, которые запрещены в большинстве стран, и многое другое.</p>
+
+    <p>Ниже приведу несколько примеров проектов, которые могут быть созданы и использованы на Darknet:</p>
+    <ol>
+      <li><dfn>Darknet маркетплейс:</dfn> Платформа для продажи товаров и услуг, которые могут быть недоступны или запрещены в обычных интернет-магазинах. Часто используют криптовалюты для анонимности сделок.</li>
+      <li><dfn>Сайт для обмена информацией и файлами:</dfn> Darknet используется для обмена конфиденциальной информацией или файлами без риска наблюдения.</li>
+      <li><dfn>Форумы и социальные сети:</dfn> Анонимные площадки для общения и обсуждений свободных тем.</li>
+      <li><dfn>Сервисы для обхода цензуры:</dfn> Доступ к заблокированным сайтам с помощью Tor и других технологий.</li>
+      <li><dfn>Блоги и информационные порталы:</dfn> Анонимные блоги и сайты для публикации статей и мнений.</li>
+    </ol>
+
+    <p>Проекты на Darknet часто основываются на шифровании, использовании Tor и криптовалютах. Тем не менее, важно помнить о законах и рисках при использовании тёмной сети.</p>
+
+    <div class="gallery">
+      <img src="Kraken.jpeg" alt="Kraken">
+      <img src="yandex.jpg" alt="Yandex">
+      <img src="telegram.jpg" alt="Telegram">
+      <img src="vps.jpg" alt="VPS">
+      <img src="twitter.jpg" alt="Twitter">
+    </div>
+  </div>
+
+</body>
+</html>
