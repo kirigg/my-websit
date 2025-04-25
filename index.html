@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Net</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Модальное окно */
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #modal-content {
+      background-color: #222;
+      color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 50%;
+      box-shadow: 0 0 20px #00ffaa;
+    }
+
+    #modal h2 {
+      color: #00ffaa;
+      margin-bottom: 20px;
+    }
+
+    #modal p {
+      font-size: 1.1em;
+    }
+
+    #modal ul {
+      padding-left: 20px;
+    }
+
+    #modal button {
+      background-color: #00ffaa;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 20px;
+    }
+
+    #modal button:hover {
+      background-color: #00cc99;
+    }
+
+    /* Навигационная панель */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 15px 30px;
+      box-shadow: 0 0 10px #00ffaa66;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .nav-brand a {
+      font-size: 1.5em;
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00ffaa;
+      border-bottom: 2px solid #00ffaa;
+    }
+
+    /* Контейнер контента */
+    .container {
+      background-color: #121212;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ff99;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #00ffcc;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      background-color: #1f1f1f;
+      color: #00ffaa;
+      transition: background-color 0.3s;
+    }
+
+    .tab.active {
+      background-color: #00ffaa;
+      color: #000;
+    }
+
+    .form {
+      display: none;
+      flex-direction: column;
+    }
+
+    .form.active {
+      display: flex;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #00ffaa;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00cc88;
+    }
+
+    /* Подвал */
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
+      color: #00ffaa;
+      box-shadow: 0 -2px 10px #00ffaa33;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #0088cc;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    footer a:hover {
+      background-color: #0077b3;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .container {
+        margin-top: 0;
+      }
+
+      #modal-content {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Модальное окно -->
+  <div id="modal">
+    <div id="modal-content">
+      <h2>Рекомендации по использованию сайта</h2>
+      <p>Прежде чем продолжить, обратите внимание на следующее:</p>
+      <ul>
+        <li>Используйте этот сайт в соответствии с законами вашей страны.</li>
+        <li>Соблюдайте конфиденциальность и анонимность.</li>
+        <li>Будьте осторожны при переходах по ссылкам.</li>
+      </ul>
+      <button onclick="closeModal()">Принять</button>
+    </div>
+  </div>
+
+  <!-- Навигация -->
+  <nav class="navbar">
+    <div class="nav-brand"><a href="1 страница.html">DarkNet Portal</a></div>
+    <ul class="nav-links">
+      <li><a href="1 страница.html">Главная</a></li>
+      <li><a href="3 страница.html">Новости</a></li>
+      <li><a href="2 страница.html">Материалы</a></li>
+      <li><a href="4 страница.html">Технологии</a></li>
+      <li><a href="8 страница.html">Философия</a></li>
+      <li><a href="6 страница.html">Безопасность</a></li>
+    </ul>
+  </nav>
+
+  <!-- Контент -->
+  <div class="container">
+    <h1>Dark Net</h1>
+    <div class="tabs">
+      <div class="tab active" onclick="switchForm('login')">Вход</div>
+      <div class="tab" onclick="switchForm('register')">Регистрация</div>
+    </div>
+
+    <!-- Вход -->
+		<form action="3 страница.html" method="post" class="form active" id="login">
+		  <input type="text" name="login" placeholder="Логин" required>
+		  <input type="password" name="password" placeholder="Пароль" required>
+		  <button type="submit">Войти</button>
+		</form>
+
+		<!-- Регистрация -->
+		<form action="register.html" method="post" class="form" id="register">
+		  <input type="text" name="login" placeholder="Имя пользователя" required>
+		  <input type="password" name="password" placeholder="Пароль" required>
+		  <button type="submit">Зарегистрироваться</button>
+		</form>
+	</div>
+
+  
+
+  <!-- Подвал -->
+  <footer>
+    <p>Свяжитесь с нами:</p>
+    <div style="display: flex; justify-content: center; gap: 20px; align-items: center; flex-wrap: wrap;">
+      <a href="https://t.me/getimy" target="_blank">Telegram: @getimy</a>
+      <span style="color: #ffffff; font-size: 1.1em;">Телефон: +9891</span>
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script>
+    function switchForm(formId) {
+      document.querySelectorAll('.form').forEach(f => f.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(formId).classList.add('active');
+      document.querySelector(`.tab[onclick="switchForm('${formId}')"]`).classList.add('active');
+    }
+
+    window.onload = function () {
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
